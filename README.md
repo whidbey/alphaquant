@@ -4,13 +4,11 @@
 
 系统需求：Windows或Linux系统或Mac，python2或python3
 
-下载后解压缩即可，无需安装
+下载后解压缩即可，不需要安装运行券商交易客户端
 
 Windows命令行运行stock_live_trade.exe
 
-Linux或Mac系统命令行运行 wine stock_live_trade.exe，Linux和Mac系统需安装wine
-
-可在命令行参数指定监听端口，例： stock_live_trade.exe 0.0.0.0 58888
+Linux或Mac系统命令行运行 wine stock_live_trade.exe，Linux和Mac系统需安装wine，可在命令行参数指定监听端口，例： stock_live_trade.exe 0.0.0.0 58888
 
 命令行运行pip install thrift
 
