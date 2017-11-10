@@ -19,3 +19,6 @@ Linux或Mac系统命令行运行 wine stock_live_trade.exe，Linux和Mac系统�
 API文档请点击主页 http://www.alpha-qt.com 右上角“帮助”
  
 QQ交流群：575874566
+
+stock_live_trade.exe编译说明：
+vs2015及以上，需要thrift，libevent，boost，zlib，openssl
