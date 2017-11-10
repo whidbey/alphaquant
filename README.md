@@ -21,7 +21,7 @@ Linux或Mac系统命令行运行 wine stock_live_trade.exe，Linux和Mac系统�
 
 解压目录下的example目录中是例子代码，推荐使用pycharm编辑调试代码
 
-API文档请点击主页 http://www.alpha-qt.com 右上角“帮助”
+API文档:http://www.alpha-qt.com/?page_id=175
  
 QQ交流群：575874566
 
