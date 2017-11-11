@@ -4,7 +4,7 @@ from thrift.transport import TSocket
 from thrift.transport import TTransport
 from thrift.protocol import TBinaryProtocol
 
-from alpha_trade import AlphaTrade
+from alpha_trade_python import AlphaTrade
 
 import time
 
