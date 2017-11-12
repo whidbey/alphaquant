@@ -1924,6 +1924,13 @@ int hexin_stock_broker_guangfa::handle_all_order_response(const std::string& res
 			}
 		}
 
+		for (iter = m_completed_order_map.begin(); iter != m_completed_order_map.end(); ++iter) {
+			if (iter->second.internal_order_id == orders[i].order_id) {
+				found = true;
+				break;
+			}
+		}
+
 		if (!found) {
 			order_state os;
 			os.quant = orders[i].quant;

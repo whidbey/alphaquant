@@ -314,7 +314,7 @@ int main(int argc, char **argv) {
 
 		LicenseManager::get_instance()->start();
 
-		std::cout << "AlphaQuant 1.1.8.3346 listen on port " << port << std::endl;
+		std::cout << "AlphaQuant 1.1.8.3396 listen on port " << port << std::endl;
 
 		//TSimpleServer server(processor, serverTransport, transportFactory, protocolFactory);
 		server.serve();
