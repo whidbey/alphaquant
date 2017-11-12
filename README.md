@@ -17,7 +17,7 @@ Linux或Mac系统命令行运行 wine stock_live_trade.exe，Linux和Mac系统�
 
 命令行运行pip install thrift
 
-将alpha_live_trade.py和alpha_trade目录拷贝到自己源代码目录，import alpha_live_trade即可使用
+将alpha_live_trade.py和alpha_trade_python目录拷贝到自己源代码目录，import alpha_live_trade即可使用
 
 解压目录下的example目录中是例子代码，推荐使用pycharm编辑调试代码
 
