@@ -75,16 +75,6 @@ class AlphaTradeHandler : virtual public AlphaTradeIf {
 	else if (brokerStr == "stock_guangfa") {
 		broker_ptr = new thread_broker_adapter(new hexin_stock_broker_guangfa(LicenseManager::get_instance()->get_broker_server("stock_guangfa"), account, password1, password2, true), false);
 	}
-	else if (brokerStr == "stock_haitong") {
-		std::vector<boost::tuple<std::string, uint16_t>> server_vec;
-		server_vec.push_back(boost::make_tuple("Htjybeta.htsec.com", 8002));
-		broker_ptr = new thread_broker_adapter(new hexin_stock_broker_huatai(server_vec, account, password1, password2, true), false);
-	}
-	else if (brokerStr == "stock_yinhe") {
-		std::vector<boost::tuple<std::string, uint16_t>> server_vec;
-		server_vec.push_back(boost::make_tuple("219.143.214.202", 6002));
-		broker_ptr = new thread_broker_adapter(new hexin_stock_broker_guangfa(server_vec, account, password1, password2, true), false);
-	}
 	else {
 		_return.ret_code = 1;
 		return;

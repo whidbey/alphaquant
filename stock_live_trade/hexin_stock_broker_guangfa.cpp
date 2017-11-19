@@ -1185,6 +1185,7 @@ static std::vector<internal_order_item> parse_query_order_response(const std::st
 		ret.push_back(oi);
 	}
 
+	success = true;
 	return ret;
 }
 
@@ -1818,7 +1819,7 @@ int hexin_stock_broker_guangfa::handle_get_holding_response(const std::string& r
 		hi.quant = quant;
 		hi.quant_available = quant_available;
 
-		memcpy(&hi.buy_price, holding_start + i * item_bytes + 72, 8);
+		memcpy(&hi.buy_price, holding_start + i * item_bytes + 64, 8);
 
 		holding_stock.push_back(hi);
 	}

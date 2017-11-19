@@ -64,9 +64,9 @@ def _get_real_time_data(sid_list):
             url = url + fix + sina_name
 
         if sys.version_info >= (3,0):
-            resp_str = str(urllib.request.urlopen(url).read())
+            resp_str = str(urllib.request.urlopen(url).read().decode("GBK"))
         else:
-            resp_str = urllib2.urlopen(url).read()
+            resp_str = urllib2.urlopen(url).read().decode("GBK")
 
         ret = _parse_sina_real_time_data_response(resp_str)
         #print("get ", len(sid_list), " realtime data success")
@@ -93,6 +93,8 @@ def unsubscribe_stock(stock_id):
 def get_stock_live_data(stock_id):
 
     ret = None
+
+    subscribe_stock(stock_id)
 
     g_lock.acquire()
     if stock_id in g_stock_price_data:
@@ -126,8 +128,6 @@ def _thread_proc():
             g_lock.acquire()
             stockid_list = list(g_stock_set.copy())
             g_lock.release()
-
-            print(len(stockid_list))
 
             if len(stockid_list) > 0:
                 ret = _get_real_time_data(stockid_list)
